@@ -59,3 +59,12 @@ heroes = [{
         publisher: 'Marvel ',
     },
 ]
+
+function agregarNuevoHeroe(heroeNuevo) {
+    if (typeof heroeNuevo === 'object') {
+        heroes.push(heroeNuevo);
+        return 'Exito. Heroe agregado.';
+    } else {
+        return 'Error. El heroe a agregar debe ser de tipo objeto';
+    }
+}
