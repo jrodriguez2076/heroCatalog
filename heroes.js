@@ -80,6 +80,24 @@ function encontrarHeroe(id) {
     return resultado
 }
 
+function actualizarHeroe(id, datos) {
+    let heroeActual = 0
+    heroeActual = encontrarHeroe(id);
+    if (heroeActual === null) {
+        return 'Error. Heroe no encontrado'
+    } else {
+        for (propiedad in datos) {
+            heroeActual[propiedad] = datos[propiedad];
+            if (heroeActual[propiedad] === datos[propiedad]) {
+                console.log(propiedad + ' cambiada con exito.');
+            } else {
+                return ('error al actualizar');
+            }
+        }
+        return 'Exito. Heroe Actualizado';
+    }
+};
+
 function eliminarHeroe(id) {
     let heroeEliminar = 0;
     heroeEliminar = encontrarHeroe(id);
