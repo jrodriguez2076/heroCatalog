@@ -121,8 +121,6 @@ function compararEdad(id1, id2) {
         return `Error. Heroe ${id2} no encontrado.`
     }
     if (!!heroe1.age || !!heroe2.age) {
-        return 'Error. Edad de uno de los Heroes no encontrada.'
-    } else {
         if (heroe1['age'] > heroe2['age']) {
             return `${heroe1.name} es mas viejo que ${heroe2.name}`
         } else if ((heroe1['age'] < heroe2['age'])) {
@@ -130,5 +128,8 @@ function compararEdad(id1, id2) {
         } else {
             return `${heroe1.name} y ${heroe2.name} son de la misma edad`;
         }
+
+    } else {
+        return 'Error. Edad de uno de los Heroes no encontrada.'
     }
 }
