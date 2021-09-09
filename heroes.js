@@ -125,8 +125,7 @@ function compararRaza(id1, id2) {
     if (!!heroe1.race || !!heroe2.race) {
         if (heroe1['race'].toLowerCase() === heroe2['race'].toLowerCase()) {
             return `${heroe1.name} y ${heroe2.name} son de la misma raza.`
-        }
-        if (heroe1['race'].toLowerCase() != heroe2['race'].toLowerCase()) {
+        } else {
             return `${heroe1.name} y ${heroe2.name} son de diferentes razas.`;
         }
     } else {
