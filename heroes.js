@@ -81,15 +81,14 @@ function encontrarHeroe(id) {
 }
 
 function actualizarHeroe(id, datos) {
-    let heroeActual = 0
-    heroeActual = encontrarHeroe(id);
+    let heroeActual = encontrarHeroe(id);
     if (heroeActual === null) {
         return 'Error. Heroe no encontrado'
     } else {
         for (propiedad in datos) {
             heroeActual[propiedad] = datos[propiedad];
             if (heroeActual[propiedad] === datos[propiedad]) {
-                console.log(propiedad + ' cambiada con exito.');
+                console.log(`${propiedad} cambiada con exito.`);
             } else {
                 return ('error al actualizar');
             }
@@ -99,13 +98,38 @@ function actualizarHeroe(id, datos) {
 };
 
 function eliminarHeroe(id) {
-    let heroeEliminar = 0;
-    heroeEliminar = encontrarHeroe(id);
+    let heroeEliminar = encontrarHeroe(id);
     if (heroeEliminar === null) {
         return 'Error. Heroe no encontrado';
     } else {
         let pos = heroes.indexOf(heroeEliminar);
         heroes.splice(pos, 1);
-        return 'Tienes ' + heroes.length + ' heroes en la lista global';
+        return (`Tienes ${heroes.length} heroes en la lista global`);
+    }
+}
+
+function compararEdad(id1, id2) {
+    if (id1 === id2) {
+        return 'No se puede comparar el mismo heroe.'
+    }
+    let heroe1 = encontrarHeroe(id1);
+    let heroe2 = encontrarHeroe(id2);
+    if (heroe1 === null) {
+        return `Error. Heroe ${id1} no encontrado.`
+    }
+    if (heroe2 === null) {
+        return `Error. Heroe ${id2} no encontrado.`
+    }
+    if (!!heroe1.age || !!heroe2.age) {
+        if (heroe1['age'] > heroe2['age']) {
+            return `${heroe1.name} es mas viejo que ${heroe2.name}`
+        } else if ((heroe1['age'] < heroe2['age'])) {
+            return `${heroe1.name} es mas joven que ${heroe2.name}`;
+        } else {
+            return `${heroe1.name} y ${heroe2.name} son de la misma edad`;
+        }
+
+    } else {
+        return 'Error. Edad de uno de los Heroes no encontrada.'
     }
 }
