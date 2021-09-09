@@ -124,9 +124,8 @@ function compararEditoral(id1, id2) {
     }
     if (!!heroe1.publisher || !!heroe2.publisher) {
         if (heroe1['publisher'].toLowerCase() === heroe2['publisher'].toLowerCase()) {
-            return `${heroe1.name} y ${heroe2.name} estan en la misma casa Editoria.`
-        }
-        if ((heroe1['publisher'].toLowerCase() != heroe2['publisher'].toLowerCase())) {
+            return `${heroe1.name} y ${heroe2.name} estan en la misma casa Editorial.`
+        } else {
             return `${heroe1.name} y ${heroe2.name} estan en diferentes casas Editoriales.`;
         }
     } else {
