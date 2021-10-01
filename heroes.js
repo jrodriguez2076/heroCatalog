@@ -110,19 +110,19 @@ function eliminarHeroe(id) {
 
 function compararEdad(id1, id2) {
     if (id1 === id2) {
-        return 'No se puede comparar el mismo heroe.'
+        return 'No se puede comparar el mismo heroe.';
     }
     let heroe1 = encontrarHeroe(id1);
     let heroe2 = encontrarHeroe(id2);
     if (heroe1 === null) {
-        return `Error. Heroe ${id1} no encontrado.`
+        return `Error. Heroe ${id1} no encontrado.`;
     }
     if (heroe2 === null) {
-        return `Error. Heroe ${id2} no encontrado.`
+        return `Error. Heroe ${id2} no encontrado.`;
     }
     if (!!heroe1.age || !!heroe2.age) {
         if (heroe1['age'] > heroe2['age']) {
-            return `${heroe1.name} es mas viejo que ${heroe2.name}`
+            return `${heroe1.name} es mas viejo que ${heroe2.name}`;
         } else if ((heroe1['age'] < heroe2['age'])) {
             return `${heroe1.name} es mas joven que ${heroe2.name}`;
         } else {
@@ -130,52 +130,105 @@ function compararEdad(id1, id2) {
         }
 
     } else {
-        return 'Error. Edad de uno de los Heroes no encontrada.'
+        return 'Error. Edad de uno de los Heroes no encontrada.';
     }
 }
 
 function compararEditoral(id1, id2) {
     if (id1 === id2) {
-        return 'No se puede comparar el mismo heroe.'
+        return 'No se puede comparar el mismo heroe.';
     }
     let heroe1 = encontrarHeroe(id1);
     let heroe2 = encontrarHeroe(id2);
     if (heroe1 === null) {
-        return `Error. Heroe ${id1} no encontrado.`
+        return `Error. Heroe ${id1} no encontrado.`;
     }
     if (heroe2 === null) {
-        return `Error. Heroe ${id2} no encontrado.`
+        return `Error. Heroe ${id2} no encontrado.`;
     }
     if (!!heroe1.publisher || !!heroe2.publisher) {
         if (heroe1['publisher'].toLowerCase() === heroe2['publisher'].toLowerCase()) {
-            return `${heroe1.name} y ${heroe2.name} estan en la misma casa Editorial.`
+            return `${heroe1.name} y ${heroe2.name} estan en la misma casa Editorial.`;
         } else {
             return `${heroe1.name} y ${heroe2.name} estan en diferentes casas Editoriales.`;
         }
     } else {
-        return 'Error. Editoral de uno de los Heroes no encontrada.'
+        return 'Error. Editoral de uno de los Heroes no encontrada.';
     }
 }
 
 function compararRaza(id1, id2) {
     if (id1 === id2) {
-        return 'No se puede comparar el mismo heroe.'
+        return 'No se puede comparar el mismo heroe.';
     }
     let heroe1 = encontrarHeroe(id1);
     let heroe2 = encontrarHeroe(id2);
     if (heroe1 === null) {
-        return `Error. Heroe ${id1} no encontrado.`
+        return `Error. Heroe ${id1} no encontrado.`;
     }
     if (heroe2 === null) {
-        return `Error. Heroe ${id2} no encontrado.`
+        return `Error. Heroe ${id2} no encontrado.`;
     }
     if (!!heroe1.race || !!heroe2.race) {
         if (heroe1['race'].toLowerCase() === heroe2['race'].toLowerCase()) {
-            return `${heroe1.name} y ${heroe2.name} son de la misma raza.`
+            return `${heroe1.name} y ${heroe2.name} son de la misma raza.`;
         } else {
             return `${heroe1.name} y ${heroe2.name} son de diferentes razas.`;
         }
     } else {
-        return 'Error. Raza de uno de los Heroes no encontrada.'
+        return 'Error. Raza de uno de los Heroes no encontrada.';
     }
+}
+
+function calcularTiempoDeDescanso(id) {
+    heroe = encontrarHeroe(id);
+    if (heroe === null) {
+        return `Error. Heroe ${id} no encontrado.`;
+    } else {
+        let tiempoDeDescanso = 0;
+        let mensaje;
+        switch (heroe.race.toLowerCase()) {
+            case "humano":
+                {
+                    tiempoDeDescanso = 60 * ((heroe.age) / 10);
+                    console.log(tiempoDeDescanso);
+                    break;
+                }
+            case "plutoniano":
+                {
+                    tiempoDeDescanso = 4 * ((heroe.age) / 12);
+                    console.log(tiempoDeDescanso);
+                    break;
+                }
+            case "kryptoniano":
+                {
+                    tiempoDeDescanso = 10 * ((heroe.age) / 30);
+                    console.log(tiempoDeDescanso);
+                    break;
+                }
+            case "amazona":
+                {
+                    if (age <= 400) {
+                        tiempoDeDescanso = 1 * ((age) / 10);
+                        console.log(tiempoDeDescanso);
+                        break;
+                    }
+                    if (age > 400) {
+                        tiempoDeDescanso = 40 + (2 * ((age - 400) / 10));
+                        console.log(tiempoDeDescanso);
+                        break;
+                    }
+                }
+            case "marciano":
+                {
+                    tiempoDeDescanso = 15 * ((heroe.age) / 10);
+                    console.log(tiempoDeDescanso);
+                    break;
+                }
+            default:
+                return `Se desconoce el tiempo de descanso.`
+        }
+        return `${heroe.name} es un ${heroe.race} y tiene ${tiempoDeDescanso.toFixed(2)} min de descanso.`
+    }
+
 }
