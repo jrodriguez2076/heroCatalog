@@ -1,10 +1,12 @@
 'use strict'
 
-const heroes = require('./heroesDB.json')
+const heroes = require('./heroesDB.json');
+const fs = require('fs');
 
 function agregarNuevoHeroe(heroeNuevo) {
     if (typeof heroeNuevo === 'object') {
         heroes.push(heroeNuevo);
+        guardarLista(heroes);
         return 'Exito. Heroe agregado.';
     } else {
         return 'Error. El heroe a agregar debe ser de tipo objeto';
@@ -35,6 +37,7 @@ function actualizarHeroe(id, datos) {
                 return ('error al actualizar');
             }
         }
+        guardarLista(heroes);
         return 'Exito. Heroe Actualizado';
     }
 };
@@ -46,6 +49,7 @@ function eliminarHeroe(id) {
     } else {
         let pos = heroes.indexOf(heroeEliminar);
         heroes.splice(pos, 1);
+        guardarLista(heroes);
         return (`Tienes ${heroes.length} heroes en la lista global`);
     }
 }
@@ -173,4 +177,8 @@ function calcularTiempoDeDescanso(id) {
         return `${heroe.name} es un ${heroe.race} y tiene ${tiempoDeDescanso.toFixed(2)} min de descanso.`
     }
 
+}
+
+function guardarLista(nuevaLista) {
+    fs.writeFileSync('./heroesDB.json', JSON.stringify(nuevaLista), { encoding: 'utf8' });
 }
