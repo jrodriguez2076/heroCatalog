@@ -13,38 +13,38 @@ function calcularEdadNativa(id) {
             case "humano":
                 {
                     edadNativa = Math.floor(heroe.age);
-                    console.log(edadNativa);
+
                     break;
                 }
             case "plutoniano":
                 {
                     edadNativa = Math.floor(heroe.age / 248);
-                    console.log(edadNativa);
+
                     break;
                 }
             case "kryptoniano":
                 {
                     edadNativa = Math.floor(heroe.age / 1000);
-                    console.log(edadNativa);
+
                     break;
                 }
             case "amazona":
                 {
                     if (heroe.age <= 500) {
                         edadNativa = Math.floor(heroe.age / 25);
-                        console.log(edadNativa);
+
                         break;
                     }
                     if (heroe.age > 500) {
                         edadNativa = Math.floor((20 + (heroe.age - 500) / 50));
-                        console.log(edadNativa);
+
                         break;
                     }
                 }
             case "marciano":
                 {
                     edadNativa = Math.floor((heroe.age / 1.8));
-                    console.log(edadNativa);
+
                     break;
                 }
             default:

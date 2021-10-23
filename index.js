@@ -11,6 +11,3 @@ const eliminarHeroe = require('./eliminarHeroe.js');
 const encontrarHeroe = require('./encontrarHeroe.js');
 const guardarLista = require('./guardarLista');
 const calcularEdadNativa = require('./calcularEdadNativa');
-
-console.log('------------------------------');
-console.log(calcularEdadNativa(5));
