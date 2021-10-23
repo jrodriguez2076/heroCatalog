@@ -2,56 +2,58 @@
 
 const encontrarHeroe = require('./encontrarHeroe.js');
 
-function calcularTiempoDeDescanso(id) {
+function calcularEdadNativa(id) {
     let heroe = encontrarHeroe(id);
     if (heroe === null) {
         return `Error. Heroe ${id} no encontrado.`;
     } else {
-        let tiempoDeDescanso = 0;
+        let edadNativa = 0;
 
         switch (heroe.race.toLowerCase()) {
             case "humano":
                 {
-                    tiempoDeDescanso = 60 * ((heroe.age) / 10);
+                    edadNativa = Math.floor(heroe.age);
+
                     break;
                 }
             case "plutoniano":
                 {
-                    tiempoDeDescanso = 4 * ((heroe.age) / 12);
+                    edadNativa = Math.floor(heroe.age / 248);
 
                     break;
                 }
             case "kryptoniano":
                 {
-                    tiempoDeDescanso = 10 * ((heroe.age) / 30);
+                    edadNativa = Math.floor(heroe.age / 1000);
 
                     break;
                 }
             case "amazona":
                 {
-                    if (heroe.age <= 400) {
-                        tiempoDeDescanso = 1 * ((heroe.age) / 10);
+                    if (heroe.age <= 500) {
+                        edadNativa = Math.floor(heroe.age / 25);
 
                         break;
                     }
-                    if (heroe.age > 400) {
-                        tiempoDeDescanso = 40 + (2 * ((heroe.age - 400) / 10));
+                    if (heroe.age > 500) {
+                        edadNativa = Math.floor((20 + (heroe.age - 500) / 50));
 
                         break;
                     }
                 }
             case "marciano":
                 {
-                    tiempoDeDescanso = 15 * ((heroe.age) / 10);
+                    edadNativa = Math.floor((heroe.age / 1.8));
 
                     break;
                 }
             default:
-                return `Se desconoce el tiempo de descanso.`
+                return `Se desconoce la edad Nativa`
         }
-        return `${heroe.name} es un ${heroe.race} y tiene ${tiempoDeDescanso.toFixed(2)} min de descanso.`
+        return `${heroe.name} es un ${heroe.race} y tiene ${edadNativa} años en su raza.`
     }
 
 }
 
-module.exports = calcularTiempoDeDescanso;
+
+module.exports = calcularEdadNativa;
