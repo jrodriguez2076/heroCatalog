@@ -11,5 +11,4 @@ const eliminarHeroe = require('./eliminarHeroe.js');
 const encontrarHeroe = require('./encontrarHeroe.js');
 const guardarLista = require('./guardarLista');
 
-console.log('------------------------------');
-console.log(calcularTiempoDeDescanso(4));
+const presentarHeroe = require('./presentarHeroe');
