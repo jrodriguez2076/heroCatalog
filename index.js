@@ -10,6 +10,7 @@ const compararRaza = require('./compararRaza.js');
 const eliminarHeroe = require('./eliminarHeroe.js');
 const encontrarHeroe = require('./encontrarHeroe.js');
 const guardarLista = require('./guardarLista');
+const calcularEdadNativa = require('./calcularEdadNativa');
 
 console.log('------------------------------');
-console.log(calcularTiempoDeDescanso(4));
+console.log(calcularEdadNativa(5));
