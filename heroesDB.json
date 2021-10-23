@@ -2,7 +2,7 @@
         "id": 1,
         "name": "SuperMan",
         "alterEgo": "Clark Kent",
-        "biography": "Escondido bajo una vida comun de periodista en Metropi=olis, se encarga de mantener a salvo la ciudad de todo lo que ocurre ",
+        "biography": "Escondido bajo una vida comun de periodista en Metropolis, se encarga de mantener a salvo la ciudad de todo lo que ocurre ",
         "age": 44500,
         "placeOfBirth": "Krypton",
         "race": "Kryptoniano",
@@ -49,7 +49,7 @@
     {
         "id": 5,
         "name": "Ironman",
-        "alterEgo": "Anthony Edward Stark ",
+        "alterEgo": "Anthony Edward Stark",
         "biography": "Multimillonario magnate empresarial e ingenioso científico, quien sufrió una grave lesión en el pecho durante un secuestro y crea una armadura para salvar su vida y escapar del cautiverio. Más tarde, Stark desarrolla su traje a traves de su compañía, Industrias Stark, para proteger al mundo",
         "age": 53,
         "placeOfBirth": "EEUU",
