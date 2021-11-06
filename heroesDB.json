@@ -13,7 +13,7 @@
         "inteligencia": 80,
         "agilidad": 40,
         "habilidades": ["Rayo Laser", "Vuela", "Super Fuerza"],
-        "debilidad": "habilidad"
+        "debilidad": "agilidad"
     },
     {
         "id": 2,
@@ -81,6 +81,6 @@
         "inteligencia": 97,
         "agilidad": 50,
         "habilidades": ["Super Traje", "Dinero", "Conocimiento"],
-        "debilidad": "agilidad"
+        "debilidad": "fuerza"
     }
 ]
