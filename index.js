@@ -20,6 +20,7 @@ const procesoHeroe = process.argv.slice(2);
 switch (procesoHeroe[0]) {
     case "calcularTiempoDeDescanso":
         console.log(calcularTiempoDeDescanso(parseInt(procesoHeroe[1])));
+        break;
 
     case "compararEdad":
         console.log(compararEdad(parseInt(procesoHeroe[1]), parseInt(procesoHeroe[2])));
