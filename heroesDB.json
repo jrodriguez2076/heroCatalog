@@ -12,7 +12,7 @@
         "fuerza": 70,
         "inteligencia": 80,
         "agilidad": 40,
-        "habilidad": "Rayo Laser",
+        "habilidades": ["Rayo Laser", "Vuela", "Super Fuerza"],
         "debilidad": "habilidad"
     },
     {
@@ -29,7 +29,7 @@
         "fuerza": 40,
         "inteligencia": 10,
         "agilidad": 60,
-        "habilidad": "Pelea",
+        "habilidades": ["Pelea", "Chistoso", "SuperMoco"],
         "debilidad": "inteligencia"
     },
     {
@@ -46,7 +46,7 @@
         "fuerza": 80,
         "inteligencia": 70,
         "agilidad": 90,
-        "habilidad": "Telaraña",
+        "habilidades": ["Telaraña", "Super Fuerza", "Sentido Aracnido"],
         "debilidad": "inteligencia"
     },
     {
@@ -63,7 +63,7 @@
         "fuerza": 90,
         "inteligencia": 85,
         "agilidad": 70,
-        "habilidad": "Super Fuerza",
+        "habilidades": ["Super Fuerza", "Conocimiento", "Lazo Dorado"],
         "debilidad": "agilidad"
     },
     {
@@ -80,7 +80,7 @@
         "fuerza": 40,
         "inteligencia": 97,
         "agilidad": 50,
-        "habilidad": "Super Traje",
+        "habilidades": ["Super Traje", "Dinero", "Conocimiento"],
         "debilidad": "agilidad"
     }
 ]
