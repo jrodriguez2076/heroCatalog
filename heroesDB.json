@@ -8,7 +8,12 @@
         "race": "Kryptoniano",
         "base": "Metropolis",
         "image": "https://sm.ign.com/t/ign_es/screenshot/default/publicity-photo-superman-the-movie-20409106-1054-1_8zn8.1280.jpg",
-        "publisher": "DC Comics"
+        "publisher": "DC Comics",
+        "fuerza": 70,
+        "inteligencia": 80,
+        "agilidad": 40,
+        "habilidades": ["Rayo Laser", "Vuela", "Super Fuerza"],
+        "debilidad": "agilidad"
     },
     {
         "id": 2,
@@ -20,7 +25,12 @@
         "race": "plutoniano",
         "base": "Personalandia",
         "image": "https://as01.epimg.net/tikitakas/imagenes/2016/11/04/portada/1478253197_049732_1478256603_noticia_normal_recorte1.jpg",
-        "publisher": "SangelComic"
+        "publisher": "SangelComic",
+        "fuerza": 40,
+        "inteligencia": 10,
+        "agilidad": 60,
+        "habilidades": ["Pelea", "Chistoso", "SuperMoco"],
+        "debilidad": "inteligencia"
     },
     {
         "id": 3,
@@ -32,7 +42,12 @@
         "race": "Humano",
         "base": "New York",
         "image": "https://cronicaglobal.elespanol.com/uploads/s1/61/11/50/7/main-700b9bff30.jpeg",
-        "publisher": "Marvel"
+        "publisher": "Marvel",
+        "fuerza": 80,
+        "inteligencia": 70,
+        "agilidad": 90,
+        "habilidades": ["Telaraña", "Super Fuerza", "Sentido Aracnido"],
+        "debilidad": "inteligencia"
     },
     {
         "id": 4,
@@ -44,7 +59,12 @@
         "race": "Amazona",
         "base": "EEUU",
         "image": "https://www.agenciapacourondo.com.ar/sites/www.agenciapacourondo.com.ar/files/mujer_maravilla_2017.jpg",
-        "publisher": "DC Comics"
+        "publisher": "DC Comics",
+        "fuerza": 90,
+        "inteligencia": 85,
+        "agilidad": 70,
+        "habilidades": ["Super Fuerza", "Conocimiento", "Lazo Dorado"],
+        "debilidad": "agilidad"
     },
     {
         "id": 5,
@@ -56,6 +76,11 @@
         "race": "Humano",
         "base": "EEUU",
         "image": "",
-        "publisher": "Marvel "
+        "publisher": "Marvel ",
+        "fuerza": 40,
+        "inteligencia": 97,
+        "agilidad": 50,
+        "habilidades": ["Super Traje", "Dinero", "Conocimiento"],
+        "debilidad": "fuerza"
     }
 ]
